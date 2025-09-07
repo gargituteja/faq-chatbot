@@ -19,19 +19,19 @@ const openai = new OpenAI({
 
 app.post('/chat', async (req, res) => {
   const { message } = req.body;
-  console.log("Message received:", message);  // ✅ Debugging
+  console.log("Message received:", message);  // 
 
   try {
     const response = await openai.chat.completions.create({
-      model: "gpt-4",  // ✅ Agar gpt-4 ka access nahi hai to "gpt-3.5-turbo" use karo
+      model: "gpt-4",  // 
       messages: [{ role: "user", content: message }],
     });
 
     const reply = response.choices[0].message.content;
-    console.log("Reply sent:", reply);  // ✅ Debugging
+    console.log("Reply sent:", reply);  // 
     res.json({ reply });
   } catch (error) {
-    console.error("OpenAI API error:", error);  // ✅ Error details dikhao
+    console.error("OpenAI API error:", error);  // 
     res.json({ reply: "Sorry, I'm having trouble answering right now." });
   }
 });
@@ -39,3 +39,4 @@ app.post('/chat', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Backend is running at http://localhost:${PORT}`);
 });
+
