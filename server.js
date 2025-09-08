@@ -6,7 +6,7 @@ import OpenAI from 'openai';
 
 dotenv.config();
 
-// ✅ Check if API key is loaded
+// Check if API key is loaded
 console.log("API Key loaded:", process.env.OPENAI_API_KEY ? "Yes ✅" : "No ❌");
 
 const app = express();
@@ -46,3 +46,4 @@ app.post('/ask', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`✅ Backend is running at http://localhost:${PORT}`);
 });
+
