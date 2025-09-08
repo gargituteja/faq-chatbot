@@ -19,7 +19,7 @@ function Chatbot() {
     setQuestion("");
 
     try {
-      // ✅ Fetch answer from backend
+      // Fetch answer from backend
       const res = await fetch("http://localhost:5000/ask", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -32,7 +32,7 @@ function Chatbot() {
     } catch (error) {
       console.error("Frontend fetch error:", error);
       const errorMsg = {
-        text: "❌ Error: Unable to connect to backend.",
+        text: "Error: Unable to connect to backend.",
         from: "bot",
       };
       setMessages((prev) => [...prev, errorMsg]);
@@ -124,3 +124,4 @@ function Chatbot() {
 }
 
 export default Chatbot;
+
