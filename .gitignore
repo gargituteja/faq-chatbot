@@ -1,9 +1,10 @@
-# 1️⃣ Set Git identity
+# Set Git identity
 git config --global user.name "Yash"
 git config --global user.email "yash@example.com"
 
-# 2️⃣ Fix line endings warning
+# Fix line endings warning
 git config --global core.autocrlf true
 
-# 3️⃣ Link current branch 'main' to remote 'origin'
+# Link current branch 'main' to remote 'origin'
 git push --set-upstream origin main
+
