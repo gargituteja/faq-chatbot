@@ -38,7 +38,7 @@ app.post('/ask', async (req, res) => {
     res.json({ reply });
   } catch (error) {
     console.error("OpenAI API Error:", error);
-    res.status(500).json({ reply: "❌ Error: Unable to fetch AI response." });
+    res.status(500).json({ reply: "Error: Unable to fetch AI response." });
   }
 });
 
@@ -46,4 +46,5 @@ app.post('/ask', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`✅ Backend is running at http://localhost:${PORT}`);
 });
+
 
